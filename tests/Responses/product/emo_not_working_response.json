@@ -1,0 +1,50 @@
+{
+    "name": "KLEJ specjalistyczny, dedykowany, 25kg",
+    "id": @integer@,
+    "code": "P0111",
+    "attributes": [],
+    "options": [],
+    "associations": [],
+    "translations": {
+        "en_US": {
+            "locale": "en_US",
+            "id": @integer@,
+            "name": "KLEJ specjalistyczny, dedykowany, 25kg",
+            "slug": "klej-specjalistyczny-dedykowany-25kg-p0111",
+            "description": "<p><br><\/p>",
+            "shortDescription": "Zaprawa KLEJ\u0104CA, PCB, FFK, 25kg, \nC2TE Zaprawa KLEJ\u0104CA, PCB, FFK, 25kg, C2TE"
+        }
+    },
+    "productTaxons": [],
+    "channels": [
+        {
+            "id": @integer@,
+            "code": "MOB",
+            "name": "Mobile Channel",
+            "description": "Lorem ipsum psore",
+            "hostname": "localhost",
+            "color": "yellow",
+            "createdAt": "@string@",
+            "updatedAt": "@string@",
+            "enabled": true,
+            "taxCalculationStrategy": "order_items_based",
+            "_links": {
+                "self": {
+                    "href": "\/api\/v1\/channels\/MOB"
+                }
+            }
+        }
+    ],
+    "reviews": [],
+    "averageRating": 0,
+    "images": [],
+    "_links": {
+        "self": {
+            "href": "\/api\/v1\/products\/P0111"
+        },
+        "variants": {
+            "href": "\/api\/v1\/products\/P0111\/variants\/"
+        }
+    }
+
+}

@@ -153,6 +153,40 @@ EOT;
         $this->assertResponse($response, 'product/create_response', Response::HTTP_CREATED);
     }
 
+
+    /**
+     * @test
+     */
+    public function emo_not_working_scenario()
+    {
+        $this->loadFixturesFromFile('authentication/api_administrator.yml');
+        $this->loadFixturesFromFile('resources/channels.yml');
+
+        $data =
+<<<EOT
+{
+   "code":"P0111",
+   "translations":{
+      "en_US":{
+         "name":"KLEJ specjalistyczny, dedykowany, 25kg",
+         "slug":"klej-specjalistyczny-dedykowany-25kg-p0111",
+         "shortDescription":"Zaprawa KLEJĄCA, PCB, FFK, 25kg, \\nC2TE Zaprawa KLEJĄCA, PCB, FFK, 25kg, C2TE",
+         "description":"<p><br></p>"
+      }
+   },
+   "enabled":true,
+   "channels":[
+      "MOB"
+   ]
+}
+EOT;
+
+        $this->client->request('POST', '/api/v1/products/', [], [], static::$authorizedHeaderWithContentType, $data);
+
+        $response = $this->client->getResponse();
+        $this->assertResponse($response, 'product/emo_not_working_response', Response::HTTP_CREATED);
+    }
+
     /**
      * @test
      */
